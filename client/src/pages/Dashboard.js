@@ -25,7 +25,7 @@ const Dashboard = ({ user }) => {
       caption: caption
     };
     try {
-      await axios.post('http://localhost:5000/api/posts', newPost);
+      await axios.post('https://art-api-o25f.onrender.com/api/posts', newPost);
       window.location.reload();
     } catch (err) {
       console.error(err);
@@ -34,7 +34,7 @@ const Dashboard = ({ user }) => {
 
   useEffect(() => {
     const fetchMyPosts = async () => {
-      const res = await axios.get(`http://localhost:5000/api/posts/${user.username}`);
+      const res = await axios.get(`https://art-api-o25f.onrender.com/api/posts/${user.username}`);
       setMyPosts(res.data);
     };
     fetchMyPosts();

@@ -15,14 +15,12 @@ const Signup = () => {
     setError(false);
     
     try {
-      // Connects to the server/routes/auth.js register endpoint
-      const res = await axios.post('http://localhost:5000/api/auth/register', {
+      const res = await axios.post('https://art-api-o25f.onrender.com/api/auth/register', {
         username,
         email,
         password,
       });
 
-      // If successful, redirect to login page
       if(res.data) {
         navigate('/login');
       }

@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Router>
-      {/* Replaced the old <nav> block with the component */}
+      {}
       <Navbar user={user} setUser={setUser} />
 
       <Routes>

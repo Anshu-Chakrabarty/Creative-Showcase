@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/posts');
+        const res = await axios.get('https://art-api-o25f.onrender.com/api/posts');
         setPosts([...showcaseData, ...res.data]);
       } catch (err) {
         console.log("Error fetching posts, showing static only");
